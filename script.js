@@ -53,4 +53,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     duplicateNode.setAttribute('aria-hidden', true);
     banner.appendChild(duplicateNode);
   });
+
+  ScrollReveal().reveal('.arrival__card', {
+    ...scrollRevealOption,
+    interval: 500,
+  });
 });
