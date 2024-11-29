@@ -83,4 +83,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     ...scrollRevealOption,
     delay: 1500,
   });
+
+  ScrollReveal().reveal('.favourite__card', {
+    ...scrollRevealOption,
+    interval: 500,
+  });
 });

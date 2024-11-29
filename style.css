@@ -353,6 +353,71 @@ header {
   background-color: var(--white);
 }
 
+.favourite__container {
+  overflow: hidden;
+}
+
+.favourite__container .section__header {
+  margin-bottom: 4rem;
+  max-width: fit-content;
+}
+
+.favourite__container .section__header::before {
+  content: '';
+}
+
+.favourite__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.favourite__card {
+  max-width: 575px;
+  margin-inline: auto;
+}
+
+.favourite__image {
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.favourite__image img {
+  transition: 0.3s;
+}
+
+.favourite__card:hover .favourite__image img {
+  transform: scale(1.1);
+}
+
+.favourite__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.favourite__content h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.favourite__content a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.favourite__content a:hover {
+  color: var(--primary-color);
+}
+
+.favourite__content span {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
 @keyframes scroll {
   to {
     transform: translateX(calc(-50% - 4rem));
@@ -453,5 +518,9 @@ header {
 
   .sale__content {
     padding-block: 4rem;
+  }
+
+  .favourite__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
