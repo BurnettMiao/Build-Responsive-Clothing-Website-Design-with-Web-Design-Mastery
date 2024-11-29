@@ -209,6 +209,31 @@ header {
   margin-inline: auto;
 }
 
+.banner {
+  padding-block: 4rem;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+
+.banner__container {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+
+  animation: scroll 45s linear infinite;
+}
+
+.banner__container img {
+  height: 30px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 4rem));
+  }
+}
+
 @media screen and (min-width: 540px) {
   .header__content h1 {
     font-size: 5rem;
