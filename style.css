@@ -225,6 +225,12 @@ header {
   animation: scroll 45s linear infinite;
 }
 
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 4rem));
+  }
+}
+
 .banner__container img {
   height: 30px;
 }
@@ -418,10 +424,37 @@ header {
   color: var(--text-light);
 }
 
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-50% - 4rem));
-  }
+.download__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.download__image img {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.download__content .section__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.download__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.download__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.download__links img {
+  max-width: 150px;
 }
 
 @media screen and (min-width: 540px) {
@@ -522,5 +555,23 @@ header {
 
   .favourite__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .download__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .download__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .download__content :is(.section__header, p) {
+    max-width: 400px;
+    text-align: left;
+  }
+
+  .download__links {
+    justify-content: flex-start;
   }
 }
